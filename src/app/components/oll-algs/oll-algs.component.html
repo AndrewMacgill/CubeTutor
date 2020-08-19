@@ -1,0 +1,21 @@
+<h2>OLL Algorithm List</h2>
+
+
+<table class="center">
+  <!-- create table header -->
+  <tr>
+    <th>Name</th>
+    <th>Algorithm</th>
+    <th>Case</th>
+  </tr>
+  <!-- loop through oll algs -->
+  <ng-container *ngFor="let ollAlg of ollAlgs; index as name">
+  
+  <tr>
+    <td [routerLink]="['/ollAlgs', ollAlg.name]">{{ ollAlg.name }}</td>
+    <td [routerLink]="['/ollAlgs', ollAlg.name]">{{ ollAlg.algorithm }}</td>
+    <td class="cases"><img src="../../../assets/oll-images/{{ollAlg.name}}.png" alt="{{ollAlg.name}}" width="100px" height="100px"></td>
+  </tr>
+
+  </ng-container>
+</table>

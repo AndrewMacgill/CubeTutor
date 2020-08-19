@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import './app/components/top-bar/top-bar.component.css';
+@import './app/components/oll-algs/oll-algs.component.css';
+@import './app/components/home/home.component.css';
+
+
+* {
+    font-family: 'Roboto', Arial, sans-serif;
+    color: rgb(180, 180, 180);
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+  
+router-outlet + *  {
+    padding: 0 16px;
+    width: max-content;
+}
+
+app-root {
+    max-width: max-content;
+    width: max-content;
+}
+
+body {
+    background-color: rgb(54, 54, 54);
+}
+
+/* Text */
+
+h1 {
+    font-size: 32px;
+    color: rgb(180, 180, 180);
+    font-weight: bolder;
+}
+
+h2 {
+    font-size: 24px;
+    color: rgb(180, 180, 180);
+    font-weight: bold;
+}

@@ -1,0 +1,124 @@
+a {
+    color: rgb(180, 180, 180);
+    font-weight: normal;
+}
+
+:host(app-oll-algs) {
+    width: 100%;
+    padding: 16px;
+}
+
+/* TABLE STYLING */
+
+table {
+    border: rgb(180, 180, 180) solid 5px;
+    border-collapse: collapse;
+    width: fit-content;
+    padding: 15%;
+    align-self: center;
+}
+
+table.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+tr, td {
+    border: 5px solid rgb(180, 180, 180);
+    width: fit-content;
+    padding-left: 15px;
+    text-align: left;
+}
+
+td:hover {
+    background-color: rgb(100, 100, 100);
+    cursor: pointer;
+}
+
+td.cases {
+    padding: 25px;
+    text-align: center;
+}
+
+td:link {
+    cursor: pointer;
+}
+
+th {
+    border: 5px solid rgb(180, 180, 180);
+    width: fit-content;
+    padding: 10px;
+    text-align: center;
+    font-size: 16;
+}
+
+
+/* Modal styling --> Algorithm zoom formatting */
+#ollAlgImage {
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+#ollAlgImage:hover {opacity: 0.75;}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 50px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(180, 180, 180);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 75%;
+    max-width: 500px;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: rgb(180, 180, 180);
+    background-color: rgb(100, 100, 100);
+    padding: 10px 0;
+    height: 150px;
+  }
+
+  /* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }
+  
+  @keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+

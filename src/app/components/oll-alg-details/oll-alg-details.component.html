@@ -1,0 +1,13 @@
+<h2>OLL Algorithms</h2>
+<div *ngIf="ollAlg">
+  <h3>{{ ollAlg.name }}</h3>
+  <h4>Algorithm to execute: {{ ollAlg.algorithm }}</h4>
+  <p>This algorithm been memorised?   {{ ollAlg.memorised }} </p>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <label formArrayName="memorisationForm" *ngFor="let memorisationElement of form.controls.memorisationForm['controls']; let i = index">
+      <input type="checkbox" [formControlName]="i" />
+      {{memorisedChecking[i].name}}
+    </label>
+    <button>Memorised</button>
+  </form>
+</div>

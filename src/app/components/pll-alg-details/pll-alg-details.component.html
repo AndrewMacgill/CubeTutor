@@ -1,0 +1,13 @@
+<h2>PLL Algorithms</h2>
+<div *ngIf="pllAlg">
+  <h3>{{ pllAlg.name }}</h3>
+  <h4>Algorithm to execute: {{ pllAlg.algorithm }}</h4>
+  <p>This algorithm been memorised?   {{ pllAlg.memorised }} </p>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <label formArrayName="memorisationForm" *ngFor="let memorisationElement of form.controls.memorisationForm['controls']; let i = index">
+      <input type="checkbox" [formControlName]="i" />
+      {{memorisedChecking[i].name}}
+    </label>
+    <button>Memorised</button>
+  </form>
+</div>

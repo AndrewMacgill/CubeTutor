@@ -1,0 +1,28 @@
+<h2>PLL Algorithm List</h2>
+<div>
+  <ng-container *ngFor="let pllAlg of pllAlgs; index as name">
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="{{pllAlg.name}}">
+      <div id="caption"></div>
+    </div>
+  </ng-container>
+  <table class="center">
+    <!-- create table header -->
+    <tr>
+      <th>Name</th>
+      <th>Algorithm</th>
+      <th>Case</th>
+    </tr>
+    <!-- loop through oll algs -->
+    <ng-container *ngFor="let pllAlg of pllAlgs; index as name">
+    
+    <tr>
+      <td [routerLink]="['/pllAlgs', pllAlg.name]">{{ pllAlg.name }}</td>
+      <td [routerLink]="['/pllAlgs', pllAlg.name]">{{ pllAlg.algorithm }}</td>
+      <td class="cases"><img src="../../../assets/pll-images/{{pllAlg.name}}-Perm.png" alt="{{pllAlg.name}}" width="100px" height="100px"></td>
+    </tr>
+  
+    </ng-container>
+  </table>
+</div>
