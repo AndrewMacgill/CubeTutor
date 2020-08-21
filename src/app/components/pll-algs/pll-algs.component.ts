@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { pllAlgs } from 'src/assets/pllAlgs';
 import { Router } from '@angular/router';
+import { ModalService } from '../_modal';
 
 @Component({
   selector: 'app-pll-algs',
@@ -13,10 +14,15 @@ export class PllAlgsComponent {
   pllAlgName;
   pllAlgs = pllAlgs;
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private modalService: ModalService) { }
 
-  expandImage(pllAlgName) {
-    let pllAlgImage:any = <any>document.getElementById(pllAlgName);
-    pllAlgImage.showModal();
+  openModal(id: string) {
+    this.modalService.open(id);
+  }
+  
+  closeModal(id: string) {
+    this.modalService.close(id);
   }
 }

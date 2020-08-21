@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { PersistenceModule } from 'angular-persistence';
+import { ModalModule } from './components/_modal';
 
 import { AppComponent } from './components/app/app.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
@@ -13,6 +14,7 @@ import { OllAlgsComponent } from './components/oll-algs/oll-algs.component';
 import { PllAlgsComponent } from './components/pll-algs/pll-algs.component';
 import { PllAlgDetailsComponent } from './components/pll-alg-details/pll-alg-details.component';
 import { OllAlgDetailsComponent } from './components/oll-alg-details/oll-alg-details.component';
+import { ModalComponent } from './components/_modal/modal.component';
 
 
 @NgModule({
@@ -21,6 +23,7 @@ import { OllAlgDetailsComponent } from './components/oll-alg-details/oll-alg-det
     HttpClientModule,
     ReactiveFormsModule,
     PersistenceModule,
+    ModalModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },

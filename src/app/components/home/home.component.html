@@ -10,22 +10,11 @@
     </p>
 </h2>
 
-<div>
-    <table>
-        <tr>
-            <th>Column 1</th>
-            <th>Column 2</th>
-            <th>Column 3</th>
-        </tr>
-        <tr>
-            <td>Value 1</td>
-            <td>Value 2</td>
-            <td>Value 3</td>
-        </tr>
-        <tr>
-            <td>Value 6</td>
-            <td>Value 7</td>
-            <td>Value 8</td>
-        </tr>
-    </table>
-</div>
+<button (click)="openModal('cube_1');">
+    <img src='../../../assets/cube.png' alt='cube'>
+</button>
+
+<jw-modal id="cube_1">
+    <img src='../../../assets/cube.png' alt='cube'>
+    <button (click)="closeModal('cube_1');">Close</button>
+</jw-modal>
