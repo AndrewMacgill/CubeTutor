@@ -2,7 +2,8 @@
 
 @import './app/components/top-bar/top-bar.component.css';
 @import './app/components/oll-algs/oll-algs.component.css';
-@import './app/components/home/home.component.css';
+@import './app/components/pll-algs/pll-algs.component.css';
+@import './app/components/_modal/modal.component.css';
 
 
 * {

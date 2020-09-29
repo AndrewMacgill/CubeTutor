@@ -1,21 +1,40 @@
 <h2>OLL Algorithm List</h2>
-
-
-<table class="center">
-  <!-- create table header -->
-  <tr>
-    <th>Name</th>
-    <th>Algorithm</th>
-    <th>Case</th>
-  </tr>
-  <!-- loop through oll algs -->
+<div>
   <ng-container *ngFor="let ollAlg of ollAlgs; index as name">
-  
-  <tr>
-    <td [routerLink]="['/ollAlgs', ollAlg.name]">{{ ollAlg.name }}</td>
-    <td [routerLink]="['/ollAlgs', ollAlg.name]">{{ ollAlg.algorithm }}</td>
-    <td class="cases"><img src="../../../assets/oll-images/{{ollAlg.name}}.png" alt="{{ollAlg.name}}" width="100px" height="100px"></td>
-  </tr>
-
+    <div id="myModal" class="alg-modal-hide">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="{{ollAlg.name}}">
+      <div id="caption"></div>
+    </div>
   </ng-container>
-</table>
+  <table class="center">
+    <!-- create table header -->
+    <tr>
+      <th>Name</th>
+      <th>Algorithm</th>
+      <th>Case</th>
+    </tr>
+    <!-- loop through oll algs -->
+    <ng-container *ngFor="let ollAlg of ollAlgs; index as name">
+    
+    <tr>
+      <td [routerLink]="['/ollAlgs', ollAlg.name]">{{ ollAlg.name }}</td>
+      <td [routerLink]="['/ollAlgs', ollAlg.name]">{{ ollAlg.algorithm }}</td>
+      <td class="cases">
+        <button style="background-color: rgb(50, 50, 50);" (click)="openModal(ollAlg.name);">
+          <img src="../../../assets/oll-images/{{ollAlg.name}}.png" alt="{{ollAlg.name}}" width="100px" height="100px">
+      </button>
+      </td>
+      <alg-modal id="{{ollAlg.name}}">
+        <img class="algZoom" src="../../../assets/oll-images/{{ollAlg.name}}.png" alt="{{ollAlg.name}}">
+        <div id="caption">
+          {{ ollAlg.algorithm }}<br><br>
+          {{ ollAlg.name }}
+        </div>
+        <button class="closeButton" (click)="closeModal(ollAlg.name);">&times;</button>
+    </alg-modal>
+    </tr>
+  
+    </ng-container>
+  </table>
+</div>

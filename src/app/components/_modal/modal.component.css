@@ -1,5 +1,9 @@
 alg-modal {display: none;}
 
+.alg-modal-hide {
+    display: none;
+}
+
 .alg-modal {
     position: fixed;
     top: 0;
@@ -40,6 +44,37 @@ alg-modal {display: none;}
     top: 50px;
     right: 50px;
     font-size: 20px;
+    transition: 0.3s;
+}
+
+.closeButton:hover,
+.closeButton:focus {
+    cursor: pointer;
+    background-color: rgb(100, 100, 100);
 }
 
 body.alg-modal-open {overflow: hidden;}
+
+#caption {
+    margin: auto;
+    display: block;
+    padding: 5px 0;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    font-size: 24px;
+    color: rgb(200, 200, 200);
+    height: 100px;
+    font-weight: bold;
+  }
+
+  @keyframes zoom {
+      from {transform:scale(0)}
+      to {transform:scale(1)}
+  }
+
+  .alg-modal-body,
+  #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+  }

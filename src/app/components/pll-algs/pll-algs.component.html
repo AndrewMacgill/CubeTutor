@@ -1,9 +1,9 @@
 <h2>PLL Algorithm List</h2>
 <div>
   <ng-container *ngFor="let pllAlg of pllAlgs; index as name">
-    <div id="myModal" class="modal">
+    <div class="alg-modal-hide">
       <span class="close">&times;</span>
-      <img class="modal-content" id="{{pllAlg.name}}">
+      <img class="alg-modal-body">
       <div id="caption"></div>
     </div>
   </ng-container>
@@ -27,6 +27,10 @@
       </td>
       <alg-modal id="{{pllAlg.name}}">
         <img class="algZoom" src="../../../assets/pll-images/{{pllAlg.name}}-Perm.png" alt="{{pllAlg.name}}">
+        <div id="caption">
+          {{ pllAlg.algorithm }}<br><br>
+          {{ pllAlg.name }} - Perm
+        </div>
         <button class="closeButton" (click)="closeModal(pllAlg.name);">&times;</button>
     </alg-modal>
     </tr>

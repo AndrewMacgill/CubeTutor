@@ -10,8 +10,6 @@ import { ModalService } from '../_modal';
 })
 export class PllAlgsComponent {
 
-  pllAlg;
-  pllAlgName;
   pllAlgs = pllAlgs;
 
   constructor(

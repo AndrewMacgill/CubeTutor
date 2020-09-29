@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
 import { ollAlgs } from 'src/assets/ollAlgs';
+import { Router } from '@angular/router';
+import { ModalService } from '../_modal';
 
 @Component({
   selector: 'app-oll-algs',
@@ -8,8 +9,18 @@ import { ollAlgs } from 'src/assets/ollAlgs';
   styleUrls: ['./oll-algs.component.css']
 })
 export class OllAlgsComponent {
-  
-  ollAlgs = ollAlgs;
-  constructor(private router: Router){};
 
+  ollAlgs=ollAlgs;
+
+  constructor(
+    private router: Router,
+    private modalService: ModalService) { }
+
+  openModal(id: string) {
+    this.modalService.open(id);
+  }
+  
+  closeModal(id: string) {
+    this.modalService.close(id);
+  }
 }
