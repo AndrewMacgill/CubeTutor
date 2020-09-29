@@ -1,6 +1,6 @@
-jw-modal {display: none;}
+alg-modal {display: none;}
 
-.jw-modal {
+.alg-modal {
     position: fixed;
     top: 0;
     right: 0;
@@ -12,14 +12,15 @@ jw-modal {display: none;}
     overflow: auto;
 }
 
-.jw-modal-body {
+.alg-modal-body {
     padding: 20px;
-    background: #fff;
+    text-align: center;
+    background: rgb(80, 80, 80);
     margin: 40px;
 }
     
 
-.jw-modal-background {
+.alg-modal-background {
     position: fixed;
     top: 0;
     right: 0;
@@ -33,4 +34,12 @@ jw-modal {display: none;}
 }
 
 
-body.jw-modal-open {overflow: hidden;}
+.closeButton {
+    background: rgb(120, 120 ,120);
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    font-size: 20px;
+}
+
+body.alg-modal-open {overflow: hidden;}

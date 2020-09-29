@@ -21,14 +21,14 @@
       <td [routerLink]="['/pllAlgs', pllAlg.name]">{{ pllAlg.name }}</td>
       <td [routerLink]="['/pllAlgs', pllAlg.name]">{{ pllAlg.algorithm }}</td>
       <td class="cases">
-        <button (click)="openModal(pllAlg.name);">
+        <button style="background-color: rgb(50, 50, 50);" (click)="openModal(pllAlg.name);">
           <img src="../../../assets/pll-images/{{pllAlg.name}}-Perm.png" alt="{{pllAlg.name}}" width="100px" height="100px">
       </button>
       </td>
-      <jw-modal id="{{pllAlg.name}}">
-        <img src="../../../assets/pll-images/{{pllAlg.name}}-Perm.png" alt="{{pllAlg.name}}">
-        <button (click)="closeModal(pllAlg.name);">Close</button>
-    </jw-modal>
+      <alg-modal id="{{pllAlg.name}}">
+        <img class="algZoom" src="../../../assets/pll-images/{{pllAlg.name}}-Perm.png" alt="{{pllAlg.name}}">
+        <button class="closeButton" (click)="closeModal(pllAlg.name);">&times;</button>
+    </alg-modal>
     </tr>
   
     </ng-container>

@@ -3,7 +3,7 @@ import { Component, ViewEncapsulation, ElementRef, Input, OnInit, OnDestroy } fr
 import { ModalService } from './modal.service';
 
 @Component({ 
-    selector: 'jw-modal', 
+    selector: 'alg-modal', 
     templateUrl: 'modal.component.html', 
     styleUrls: ['modal.component.css'],
     encapsulation: ViewEncapsulation.None
@@ -28,7 +28,7 @@ export class ModalComponent implements OnInit, OnDestroy {
 
         // close modal on background click
         this.element.addEventListener('click', el => {
-            if (el.target.className === 'jw-modal') {
+            if (el.target.className === 'alg-modal') {
                 this.close();
             }
         });
@@ -46,12 +46,12 @@ export class ModalComponent implements OnInit, OnDestroy {
     // open modal
     open(): void {
         this.element.style.display = 'block';
-        document.body.classList.add('jw-modal-open');
+        document.body.classList.add('alg-modal-open');
     }
 
     // close modal
     close(): void {
         this.element.style.display = 'none';
-        document.body.classList.remove('jw-modal-open');
+        document.body.classList.remove('alg-modal-open');
     }
 }
