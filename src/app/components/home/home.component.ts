@@ -10,6 +10,8 @@ export class HomeComponent implements OnInit {
 
   constructor(private modalService: ModalService) { }
 
+  scramble: string;
+
   ngOnInit(): void {
   }
 
@@ -21,4 +23,8 @@ export class HomeComponent implements OnInit {
     this.modalService.close(id);
   }
   
+  generateScramble() {
+    this.scramble = 'abc';
+    return this.scramble;
+  }
 }
