@@ -41,7 +41,6 @@ export class HomeComponent implements OnInit {
   generateScramble() {
     var moveSeq: string[][] = [];
     var scrambleString: string = '';
-    var scrambleAxes: string = '';
     var prevMove: string[] = ['W', 'W', 'W'];
     var currMove: string[] = ['W', 'W', 'W'];
     while (moveSeq.length < 12) {
@@ -59,11 +58,8 @@ export class HomeComponent implements OnInit {
     moveSeq.forEach(eachMove => {
 //      console.log('Each move: ' + eachMove);
       scrambleString += eachMove[1] + ' ';
-      scrambleAxes += eachMove[0] + ' ';
     });
     this.scramble = scrambleString;
-//    console.log('The move sequence after the loop: ' + this.scramble);
-    console.log('The move sequence axes after the loop: ' + scrambleAxes);
     return this.scramble;
   }
 }
