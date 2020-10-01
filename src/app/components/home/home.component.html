@@ -22,3 +22,8 @@
 <br> <br>
 <button (click)="generateScramble();">Get Scramble</button>
 <h1>{{ scramble }}</h1>
+
+<br> <br>
+<button (click)="startCountdown();">Start Timer</button>
+<h1 *ngIf="timerDisp >= 8" style="color: rgb(180, 180, 180);">{{ timerDisp }}</h1>
+<h1 *ngIf="timerDisp <= 7" style="color: rgb(180, 0, 0);">{{ timerDisp }}</h1>

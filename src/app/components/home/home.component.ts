@@ -10,8 +10,12 @@ export class HomeComponent implements OnInit {
 
   constructor(private modalService: ModalService) { }
 
+  // for scramble generator
   scramble: string;
   movesList: string[][];
+
+  // for countdown timer
+  timerDisp: number;
 
   moves: string[][] = [
     ['X', 'R', 'R'],
@@ -54,12 +58,24 @@ export class HomeComponent implements OnInit {
         currMove = proposedMove;
       }
     }
-//    console.log('The move sequence after the loop: ' + moveSeq);
     moveSeq.forEach(eachMove => {
-//      console.log('Each move: ' + eachMove);
       scrambleString += eachMove[1] + ' ';
     });
     this.scramble = scrambleString;
     return this.scramble;
   }
+
+  startCountdown() {
+    var counter = 15;
+
+    const interval = setInterval(() => {
+      this.timerDisp = counter;
+      counter--;
+
+      if (counter < 0) {
+        clearInterval(interval);
+      }
+    }, 1000);
+  }
+
 }
