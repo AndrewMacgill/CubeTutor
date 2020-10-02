@@ -40,14 +40,13 @@ export class ScrambleComponent implements OnInit {
     ];
 
   generateScramble() {
+    this.countdownRunning=false;
     var moveSeq: string[][] = [];
     var scrambleString: string = '';
     var prevMove: string[] = [];
     var currMove: string[] = [];
-    while (moveSeq.length < 12) {
+    while (moveSeq.length < 15) {
       var proposedMove: string[] = this.moves[Math.floor(Math.random() * 18)];
-      
-      console.log('prev move: ' + prevMove + '\n'+ 'curr move: ' + currMove + '\n' + 'proposed move: ' + proposedMove);
       // if valid move (i.e. no multiple moves of same face or 3 consecutive similar axes turns (e.g. R L R))
       if (proposedMove[2] != currMove[2] && !(proposedMove[0] == prevMove[0] && proposedMove[0] == currMove[0])) {
         moveSeq.push(proposedMove);
@@ -60,22 +59,25 @@ export class ScrambleComponent implements OnInit {
     });
     this.scramble = scrambleString;
     this.scrambleGenerated = true;
+    this.countdownRunning = false;
     return this.scramble;
   }
 
   startCountdown() {
     this.countdownRunning = true;
-    var counter = 15;
+    this.scrambleGenerated = false;
 
+    var counter = 15;
     const interval = setInterval(() => {
       this.timerDisp = counter;
       counter--;
-
-      if (counter < 0) {
+      if (counter < 0 || !this.countdownRunning) {
         clearInterval(interval);
         this.countdownRunning = false;
       }
     }, 1000);
+    
+    
   }
 
   @HostListener('window:keydown', ['$event'])

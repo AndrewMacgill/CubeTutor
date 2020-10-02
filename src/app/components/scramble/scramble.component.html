@@ -1,9 +1,15 @@
-
-<h1>Scramble Generator and inspection timer</h1>
+<button id="scrambleButton" class="top-layer-button" (click)="generateScramble();">Generate A Scramble (Enter)</button>
+<br><br>
+<h1 *ngIf="scrambleGenerated == false && countdownRunning == false" style="font-size: 175%; text-align: center">
+    Welcome to the practice page. <br>
+    To generate a random scramble, please press the Enter key. <br>
+    Once your cube is scrambled, hit the Space Bar to start the 15 second inspection timer.
+</h1>
+<h1 *ngIf="scrambleGenerated == true" style="font-size: xx-large; text-align:center">
+    {{ scramble }}
+</h1>
 <br> <br>
-<button id="scrambleButton" class="button fancy-button" (click)="generateScramble();">Get Scramble</button>
-<h1>{{ scramble }}</h1>
-<br> <br>
-<button id="timer" class="button fancy-button" (click)="startCountdown();" >Start Timer</button>
-<h1 *ngIf="timerDisp >= 8" style="color: rgb(180, 180, 180);">{{ timerDisp }}</h1>
-<h1 *ngIf="timerDisp <= 7" style="color: rgb(180, 0, 0);">{{ timerDisp }}</h1>
+<button id="timer" class="bottom-layer-button" (click)="startCountdown();" >Start Inspection (Space)</button>
+<h1 *ngIf="timerDisp >= 8 && countdownRunning == true" style="color: rgb(180, 180, 180); font-size: 500%; text-align:center">{{ timerDisp }}</h1>
+<h1 *ngIf="timerDisp <= 7 && timerDisp >= 4 && countdownRunning == true" style="color: rgb(200, 200, 0); font-size: 500%; text-align:center">{{ timerDisp }}</h1>
+<h1 *ngIf="timerDisp <= 3 && countdownRunning == true" style="color: rgb(180, 0, 0); font-size: 500%; text-align:center">{{ timerDisp }}</h1>
