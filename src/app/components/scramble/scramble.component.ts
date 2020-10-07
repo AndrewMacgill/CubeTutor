@@ -11,11 +11,19 @@ export class ScrambleComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  // scramble properties
   scramble: string;
   scrambleGenerated: boolean = false;
   movesList: string[][];
-  timerDisp: number;
+  //countdown timer properties
+  countdownTimerDisp: number;
   countdownRunning: boolean = false;
+  //stopwatch properties
+  stopwatchRunning: boolean = false;
+  stopwatchDisplay: boolean = false;
+  stopwatchSubSeconds: string;
+  stopwatchSeconds: string;
+  stopwatchMinutes: string;
   
   moves: string[][] = 
     [
@@ -40,6 +48,7 @@ export class ScrambleComponent implements OnInit {
     ];
 
   generateScramble() {
+    this.stopwatchDisplay = false;
     this.countdownRunning=false;
     var moveSeq: string[][] = [];
     var scrambleString: string = '';
@@ -69,15 +78,32 @@ export class ScrambleComponent implements OnInit {
 
     var counter = 15;
     const interval = setInterval(() => {
-      this.timerDisp = counter;
+      this.countdownTimerDisp = counter;
       counter--;
-      if (counter < 0 || !this.countdownRunning) {
+      if (counter < 0) {
+        document.getElementById("stopwatchButton").click();
+      }
+      if (counter < 0 || !this.countdownRunning || this.stopwatchRunning) {
         clearInterval(interval);
         this.countdownRunning = false;
       }
     }, 1000);
-    
-    
+  }
+
+  startTimer() {
+    this.stopwatchRunning = true;
+    this.stopwatchDisplay = true;
+
+    var stopwatchTime = 0;
+    const timerInterval = setInterval(() => {
+      ((stopwatchTime % 100).toString().length == 1)?this.stopwatchSubSeconds = '0' + (stopwatchTime % 100).toString() : this.stopwatchSubSeconds = (stopwatchTime % 100).toString();
+      (Math.floor((stopwatchTime/100) % 60).toString().length == 1)?this.stopwatchSeconds = '0' + Math.floor((stopwatchTime/100) % 60).toString() : this.stopwatchSeconds =  Math.floor((stopwatchTime/100) % 60).toString();
+      (Math.floor((stopwatchTime/6000) % 60).toString().length == 1)?this.stopwatchMinutes = '0' + Math.floor((stopwatchTime/6000) % 60).toString() : this.stopwatchMinutes = Math.floor((stopwatchTime/6000) % 60).toString();
+      stopwatchTime ++;
+      if (!this.stopwatchRunning) {
+        clearInterval(timerInterval);
+      }
+    }, 10);
   }
 
   @HostListener('window:keydown', ['$event'])
@@ -87,7 +113,14 @@ export class ScrambleComponent implements OnInit {
       this.scrambleGenerated = true;
     }
     if (event.key === ' ' && this.scrambleGenerated && !this.countdownRunning) {
-      document.getElementById("timer").click();
+      document.getElementById("countdownButton").click();
+    }
+    else if (event.key === ' ' && this.stopwatchRunning) {
+      this.stopwatchDisplay = true;
+      this.stopwatchRunning = false;
+    }
+    else if (event.key === ' ' && !this.stopwatchRunning && this.countdownRunning) {
+      document.getElementById("stopwatchButton").click();
     }
   }
 

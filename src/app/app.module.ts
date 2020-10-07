@@ -16,6 +16,7 @@ import { PllAlgDetailsComponent } from './components/pll-alg-details/pll-alg-det
 import { OllAlgDetailsComponent } from './components/oll-alg-details/oll-alg-details.component';
 import { ModalComponent } from './components/_modal/modal.component';
 import { ScrambleComponent } from './components/scramble/scramble.component';
+import { TimerComponent } from './components/timer/timer.component';
 
 
 @NgModule({
@@ -28,6 +29,8 @@ import { ScrambleComponent } from './components/scramble/scramble.component';
     RouterModule.forRoot([
       { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: 'home', component: HomeComponent },
+      // for testing
+      { path: 'timer', component: TimerComponent },
       { path: 'scramble', component: ScrambleComponent },
       { path: 'ollAlgs', component: OllAlgsComponent },
       { path: 'pllAlgs', component: PllAlgsComponent },
@@ -44,7 +47,8 @@ import { ScrambleComponent } from './components/scramble/scramble.component';
     OllAlgDetailsComponent,
     PllAlgsComponent,
     PllAlgDetailsComponent,
-    ScrambleComponent
+    ScrambleComponent,
+    TimerComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
