@@ -1,22 +1,22 @@
 export const ollAlgs = [
   {
     name: '0-1',
-    algorithm: 'ENTER HERE',
+    algorithm: 'R U2 R2 F R F\' U2 R\' F R F\'',
     memorised: false
   },
   {
     name: '0-2',
-    algorithm: 'ENTER HERE',
+    algorithm: 'r U r\' U2 r U2 R\' U2 R U\' r\'',
     memorised: false
   },
   {
     name: '0-3',
-    algorithm: 'ENTER HERE',
+    algorithm: 'r\' R2 U R\' U r U2 r\' U M\'',
     memorised: false
   },
   {
     name: '0-4',
-    algorithm: 'ENTER HERE',
+    algorithm: 'M U\' r U2 r\' U\' R U\' R\' M\'',
     memorised: false
   },
   {
@@ -81,22 +81,22 @@ export const ollAlgs = [
   },
   {
     name: '0-17',
-    algorithm: 'ENTER HERE',
+    algorithm: 'F R\' F\' R2 r\' U R U\' R\' U\' M\'',
     memorised: false
   },
   {
     name: '0-18',
-    algorithm: 'ENTER HERE',
+    algorithm: 'r U R\' U R U2 r2 U\' R U\' R\' U2 r',
     memorised: false
   },
   {
     name: '0-19',
-    algorithm: 'ENTER HERE',
+    algorithm: 'r\' R U R U R\' U\' M\' R\' F R F\'',
     memorised: false
   },
   {
     name: '0-20',
-    algorithm: 'ENTER HERE',
+    algorithm: 'r U R\' U\' M2 U R U\' R\' U\' M\'',
     memorised: false
   },
   {
@@ -136,152 +136,152 @@ export const ollAlgs = [
   },
   {
     name: '0-28',
-    algorithm: 'ENTER HERE',
+    algorithm: 'M\' U M U2 M\' U M',
     memorised: false
   },
   {
     name: '0-29',
-    algorithm: 'ENTER HERE',
+    algorithm: 'R U R\' U\' R U\' R\' F\' U\' F R U R\'',
     memorised: false
   },
   {
     name: '0-30',
-    algorithm: 'ENTER HERE',
+    algorithm: 'L\' U\' L U L\' U L F U F\' L\' U\' L',
     memorised: false
   },
   {
     name: '0-31',
-    algorithm: 'ENTER HERE',
+    algorithm: 'R\' U\' F U R U\' R\' F\' R',
     memorised: false
   },
   {
     name: '0-32',
-    algorithm: 'ENTER HERE',
+    algorithm: 'L U F\' U\' L\' U L F L\'',
     memorised: false
   },
   {
     name: '0-33',
-    algorithm: 'ENTER HERE',
+    algorithm: 'R U R\' U\' R\' F R F\'',
     memorised: false
   },
   {
     name: '0-34',
-    algorithm: 'ENTER HERE',
+    algorithm: 'R U R2 U\' R\' F R U R U\' F\'',
     memorised: false
   },
   {
     name: '0-35',
-    algorithm: 'ENTER HERE',
+    algorithm: 'R U2 R2 F R F\' R U2 R\'',
     memorised: false
   },
   {
     name: '0-36',
-    algorithm: 'ENTER HERE',
+    algorithm: 'L\' U\' L U\' L\' U L U L F\' L\' F',
     memorised: false
   },
   {
     name: '0-37',
-    algorithm: 'ENTER HERE',
+    algorithm: 'F R\' F\' R U R U\' R\'',
     memorised: false
   },
   {
     name: '0-38',
-    algorithm: 'ENTER HERE',
+    algorithm: 'R U R\' U R U\' R\' U\' R\' F R F\'',
     memorised: false
   },
   {
     name: '0-39',
-    algorithm: 'ENTER HERE',
+    algorithm: 'L F\' L\' U\' L U F U\' L\'',
     memorised: false
   },
   {
     name: '0-40',
-    algorithm: 'ENTER HERE',
+    algorithm: 'R\' F R U R\' U\' F\' U R',
     memorised: false
   },
   {
     name: '0-41',
-    algorithm: 'ENTER HERE',
+    algorithm: 'R U R\' U R U2 R\' F R U R\' U\' F\'',
     memorised: false
   },
   {
     name: '0-42',
-    algorithm: 'ENTER HERE',
+    algorithm: 'R\' U\' R U\' R\' U2 R F R U R\' U\' F\'',
     memorised: false
   },
   {
     name: '0-43',
-    algorithm: 'ENTER HERE',
+    algorithm: 'F\' U\' L\' U L F',
     memorised: false
   },
   {
     name: '0-44',
-    algorithm: 'ENTER HERE',
+    algorithm: 'F U R U\' R\' F\'',
     memorised: false
   },
   {
     name: '0-45',
-    algorithm: 'ENTER HERE',
+    algorithm: 'F R U R\' U\' F\'',
     memorised: false
   },
   {
     name: '0-46',
-    algorithm: 'ENTER HERE',
+    algorithm: '\' U\' R\' F R F\' U R',
     memorised: false
   },
   {
     name: '0-47',
-    algorithm: 'ENTER HERE',
+    algorithm: 'F\' L\' U\' L U L\' U\' L U F',
     memorised: false
   },
   {
     name: '0-48',
-    algorithm: 'ENTER HERE',
+    algorithm: 'F R U R\' U\' R U R\' U\' F\'',
     memorised: false
   },
   {
     name: '0-49',
-    algorithm: 'ENTER HERE',
+    algorithm: 'L F\' L2 B\' L2 F L2 B\' L',
     memorised: false
   },
   {
     name: '0-50',
-    algorithm: 'ENTER HERE',
+    algorithm: 'R\' F R2 B R2 F\' R2 B R\'',
     memorised: false
   },
   {
     name: '0-51',
-    algorithm: 'ENTER HERE',
+    algorithm: 'F U R U\' R\' U R U\' R\' F\'',
     memorised: false
   },
   {
     name: '0-52',
-    algorithm: 'ENTER HERE',
+    algorithm: 'R\' F\' U\' F U\' R U R\' U R',
     memorised: false
   },
   {
     name: '0-53',
-    algorithm: 'ENTER HERE',
+    algorithm: 'l\' U\' L U\' L\' U L U\' L\' U2 l',
     memorised: false
   },
   {
     name: '0-54',
-    algorithm: 'ENTER HERE',
+    algorithm: 'r U R\' U R U\' R\' U R U2 r\'',
     memorised: false
   },
   {
     name: '0-55',
-    algorithm: 'ENTER HERE',
+    algorithm: 'R\' F U R U\' R2 F\' R2 U R\' U\' R',
     memorised: false
   },
   {
     name: '0-56',
-    algorithm: 'ENTER HERE',
+    algorithm: 'r\' U\' r U\' R\' U R\' U R r\' U r',
     memorised: false
   },
   {
     name: '0-57',
-    algorithm: 'ENTER HERE',
+    algorithm: 'R U R\' U\' M\' U R U\' r\'',
     memorised: false
   },
 ];

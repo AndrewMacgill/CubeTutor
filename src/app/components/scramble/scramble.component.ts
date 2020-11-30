@@ -24,6 +24,8 @@ export class ScrambleComponent implements OnInit {
   stopwatchSubSeconds: string;
   stopwatchSeconds: string;
   stopwatchMinutes: string;
+  //solvetimes
+  solveTimeList: string[];
   
   moves: string[][] = 
     [
@@ -54,7 +56,7 @@ export class ScrambleComponent implements OnInit {
     var scrambleString: string = '';
     var prevMove: string[] = [];
     var currMove: string[] = [];
-    while (moveSeq.length < 15) {
+    while (moveSeq.length < 20) {
       var proposedMove: string[] = this.moves[Math.floor(Math.random() * 18)];
       // if valid move (i.e. no multiple moves of same face or 3 consecutive similar axes turns (e.g. R L R))
       if (proposedMove[2] != currMove[2] && !(proposedMove[0] == prevMove[0] && proposedMove[0] == currMove[0])) {
@@ -118,6 +120,8 @@ export class ScrambleComponent implements OnInit {
     else if (event.key === ' ' && this.stopwatchRunning) {
       this.stopwatchDisplay = true;
       this.stopwatchRunning = false;
+      this.solveTimeList.push(this.stopwatchMinutes + ':' + this.stopwatchSeconds + ':' + this.stopwatchSubSeconds);
+      console.log(this.solveTimeList);
     }
     else if (event.key === ' ' && !this.stopwatchRunning && this.countdownRunning) {
       document.getElementById("stopwatchButton").click();

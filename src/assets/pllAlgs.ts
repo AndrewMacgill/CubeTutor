@@ -21,22 +21,22 @@ export const pllAlgs = [
   },
   {
     name: 'Ga',
-    algorithm: '',
+    algorithm: 'D\' R2 U R\' U R\' U\' R U\' R2 U\' D R\' U R',
     memorised: true
   },
   {
     name: 'Gb',
-    algorithm: '',
+    algorithm: 'D R\' U\' R U D\' R2 U R\' U R U\' R U\' R2',
     memorised: true
   },
   {
     name: 'Gc',
-    algorithm: '',
+    algorithm: 'R2 F2 R U2 R U2 R\' F R U R\' U\' R\' F R2',
     memorised: true
   },
   {
     name: 'Gd',
-    algorithm: '',
+    algorithm: 'D\' R U R\' U\' D R2 U\' R U\' R\' U R\' U R2',
     memorised: true
   },
   {
