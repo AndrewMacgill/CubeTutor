@@ -1,0 +1,23 @@
+<button id="scrambleButton" class="top-layer-button" (click)="generateScramble();">Generate A Scramble (Enter)</button>
+<br><br>
+<h1 *ngIf="scrambleGenerated == false && !countdownRunning && !stopwatchDisplay" style="font-size: 175%; text-align: center">
+    Welcome to the practice page. <br>
+    To generate a random scramble, please press the Enter key. <br>
+    Once your cube is scrambled, hit the Space Bar to start the 15 second inspection timer.
+</h1>
+<h1 *ngIf="scrambleGenerated == true" style="font-size: xx-large; text-align:center">
+    {{ scramble }}
+</h1>
+<br> <br>
+<button id="countdownButton" *ngIf="!countdownRunning" class="bottom-layer-button" (click)="startCountdown();" >Start Inspection (Space)</button>
+<button id="stopwatchButton" *ngIf="countdownRunning" class="bottom-layer-button" (click)="startTimer();" >Start Timer (Space)</button>
+<h1 *ngIf="countdownTimerDisp >= 8 && countdownRunning" style="color: rgb(180, 180, 180); font-size: 500%; text-align:center">{{ countdownTimerDisp }}</h1>
+<h1 *ngIf="countdownTimerDisp <= 7 && countdownTimerDisp >= 4 && countdownRunning" style="color: rgb(200, 200, 0); font-size: 500%; text-align:center">{{ countdownTimerDisp }}</h1>
+<h1 *ngIf="countdownTimerDisp <= 3 && countdownRunning" style="color: rgb(180, 0, 0); font-size: 500%; text-align:center">{{ countdownTimerDisp }}</h1>
+<h1 *ngIf="stopwatchDisplay && stopwatchRunning" style="font-size: 500%; text-align:center">{{ stopwatchMinutes }}:{{ stopwatchSeconds }}:{{ stopwatchSubSeconds }}</h1>
+<h1 *ngIf="stopwatchDisplay && !stopwatchRunning" style="font-size: 500%; text-align:center">
+    {{ stopwatchMinutes }}:{{ stopwatchSeconds }}:{{ stopwatchSubSeconds }} <br>
+    <h2>
+        Hit enter to generate a new scramble
+    </h2>
+</h1>

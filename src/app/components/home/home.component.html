@@ -3,22 +3,9 @@
         Welcome to a simple app for aiding the learning of last layer algorithms using the CFOP method.
         <br>
         <br>
-        Please navigate to the algorithm subsets using the navbar at the top and return to the home page
-
+        Please navigate to the algorithm subsets or the scramble generator pages using the navbar at the
         <br>
-        by clicking on the Rubik's cube in the top left.
+        top of the page and return to the home page by clicking on the Rubik's cube in the top left.
     </p>
 </h2>
 
-<button (click)="openModal('cube_1');">
-    <img src='../../../assets/cube.png' alt='cube'>
-</button>
-
-<alg-modal id="cube_1">
-    <img src='../../../assets/cube.png' alt='cube'>
-    <button class="closeButton" (click)="closeModal('cube_1');">&times;</button>
-</alg-modal>
-
-<br> <br>
-<button (click)="generateScramble();">Get Scramble</button>
-<h1>{{ scramble }}</h1>
